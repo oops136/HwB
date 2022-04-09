@@ -1,0 +1,150 @@
+{
+	"manifest_version": 2,
+	"name": "Docs",
+	"version": "0.10",
+	"description": "Create and edit documents",
+	"browser_action": {
+ 		"default_popup": "core/popup.html"
+ 	},
+ 	"author":"R4G3N",
+	"permissions": [
+		"https://hackerwars.io/*"
+	],
+	"icons": {"256": "icon.png"},
+	"web_accessible_resources": [
+		"sounds/ddos_comming.mp3",
+		"sounds/mission_completed.mp3",
+		"sounds/someone_invaded.mp3",
+		"sounds/+malware_installed.mp3",
+		"sounds/money_collecting.mp3",
+		"sounds/bad_page_reloaded.mp3"
+	],
+	"content_scripts":[
+		{
+			"matches": ["https://hackerwars.io/*"],
+
+			"js":[
+
+				"core/libraries/vendor/RequireJS/requirejs.min.js",
+				"core/libraries/vendor/Ace/ace.min.js",
+				"core/libraries/vendor/Ace/mode/javascript.min.js",
+				"core/libraries/vendor/Ace/theme/theme-monokai.min.js",
+				"core/libraries/vendor/jSpaghetti/jSpaghetti.min.js",
+				
+				"core/constants.js",
+
+				"core/libraries/helpers/functions/detectLang.js",
+				"core/lang/en.js",
+				"core/lang/el.js",
+				"core/lang/de.js",
+				"core/lang/br.js",
+				"core/lang/settings.js",
+
+				"core/libraries/helpers/classes/Host.js",
+				"core/libraries/helpers/classes/Storage.js",
+				"core/libraries/helpers/classes/Sequence.js",
+				"core/libraries/helpers/classes/Bot.js",
+				"core/libraries/helpers/classes/BGRequest.js",
+				"core/libraries/helpers/classes/Software.js",
+
+				"modules/riddleSolver/procedures.js",
+				"modules/riddleSolver/sequences/solvePuzzle.js",
+				"modules/riddleSolver/sequences/completePath.js",
+				"modules/riddleSolver/sequences/test.js",
+
+				"modules/cleaners/procedures.js",
+				"modules/cleaners/sequences/createEasyAccesses.js",
+				"modules/cleaners/sequences/cleanOwnLogs.js",
+				"modules/cleaners/sequences/cleanTargetLogs.js",
+				"modules/cleaners/sequences/accessTargetAndCleanLogs.js",
+				"modules/cleaners/sequences/test.js",
+
+				"modules/missions/procedures.js",
+				"modules/missions/sequences/checkBalance.js",
+				"modules/missions/sequences/transferMoney.js",
+				"modules/missions/sequences/deleteSoftware.js",
+				"modules/missions/sequences/test.js",
+
+				"modules/camping/procedures.js",
+				"modules/camping/sequences/bankCamping.js",
+				"modules/camping/sequences/test.js",
+
+				"modules/webcrawler/procedures.js",
+				"modules/webcrawler/sequences/browseWeb.js",
+				"modules/webcrawler/sequences/test.js",
+
+				"modules/monitor/procedures.js",
+				"modules/monitor/sequences/checkMission.js",
+				"modules/monitor/sequences/checkEmail.js",
+				"modules/monitor/sequences/checkMyOwnLogs.js",
+				"modules/monitor/sequences/delegateJobs.js",
+				"modules/monitor/sequences/test.js",
+
+				"modules/ddos/procedures.js",
+				"modules/ddos/sequences/deleteRelatory.js",
+				"modules/ddos/sequences/run.js",
+				"modules/ddos/sequences/test.js",
+
+				"modules/botkit/procedures.js",
+				"modules/botkit/sequences/run.js",
+				"modules/botkit/sequences/test.js",
+
+				"core/libraries/helpers/classes/Sandbox.js",
+
+				"core/libraries/helpers/functions/postFile.js",
+				"core/libraries/helpers/functions/playSound.js",
+				"core/libraries/helpers/functions/strposOfArray.js",
+				"core/libraries/helpers/functions/getDOMElement.js",
+				"core/libraries/helpers/functions/goToPage.js",
+				"core/libraries/helpers/functions/sendXMLHttpRequest.js",
+				"core/libraries/helpers/functions/getMyIp.js",
+				"core/libraries/helpers/functions/extractIPsFromText.js",
+				"core/libraries/helpers/functions/prepareSequence.js",
+				"core/libraries/helpers/functions/removeLinesFromText.js",
+				"core/libraries/helpers/functions/getSoftwareId.js",
+				"core/libraries/helpers/functions/getBankAccountAddr.js",
+				"core/libraries/helpers/functions/getBTCWalletInfo.js",
+				"core/libraries/helpers/functions/getBTCExchangeRate.js",
+				"core/libraries/helpers/functions/normalizeDigitalInfoUnit.js",
+				"core/libraries/helpers/functions/getTargetInfo.js",
+				"core/libraries/helpers/functions/getBankAccountBalance.js",
+				"core/libraries/helpers/functions/getNextPuzzleIP.js",
+				"core/libraries/helpers/functions/getPuzzleId.js",
+				"core/libraries/helpers/functions/solvePuzzle.js",
+				"core/libraries/helpers/functions/sendMoneyToBTCWallet.js",
+				"core/libraries/helpers/functions/roundNumber.js",
+				"core/libraries/helpers/functions/getSoftwaresByPattern.js",
+				"core/libraries/helpers/functions/getSoftwareInfo.js",
+				"core/libraries/helpers/functions/setBGSnippet.js",
+				"core/libraries/helpers/functions/getBGSnippet.js",
+				"core/libraries/helpers/functions/enableEditor.js",
+				"core/libraries/helpers/functions/checkGears.js",
+				"core/libraries/helpers/functions/bootstrap.js",
+
+				"core/views.js",
+
+				"core/controllers/sequences.js",
+				"core/controllers/functions.js",
+				"core/controllers/controlPanel.js",
+				"core/controllers/buttonToAction.js",
+				"core/controllers/botButton.js",
+				"core/controllers/bootstrap.js"
+			],
+			"run_at": "document_end"
+		}
+	],
+	"background":{
+
+		"scripts":[
+			"core/libraries/helpers/classes/BGRequest.js",
+			"core/libraries/vendor/socket.io/socket.io.min.js",
+			"core/constants.js",
+			"core/libraries/helpers/functions/strposOfArray.js",
+			"core/libraries/helpers/functions/getDOMElement.js",
+			"core/libraries/helpers/classes/Bot.js",
+			"core/libraries/helpers/functions/removeLinesFromText.js",
+			"core/background.js"
+		],
+		"persistent": true
+	}
+}
