@@ -1,4 +1,5 @@
-# HwB v0
+# HwB v0.10
+
 Malicious content removed by R4G3N
 
 Suite of scripts to automate some processes on Hacker Wars game website.
