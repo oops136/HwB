@@ -3,11 +3,11 @@ Malicious content removed by regen@nuke.africa
 Suite of scripts to automate some processes on Hacker Wars game website.
 
 ## Changelog, v.10
-Removed Federal's external websites 'socket.io' connection from code, likely used to siphon data.
-Fixed webcrawler/mission/cleaners/monitor/camping sequencing to properly mitigrate 503 pages / void auto logout issue
-Unhid DDoS functionality
-Cleaned Setting Page
-Obfuscated extention appearance to appear as Google Docs
+* Removed Federal's external websites 'socket.io' connection from code, likely used to siphon data.
+* Fixed webcrawler/mission/cleaners/monitor/camping sequencing to properly mitigrate 503 pages / void auto logout issue
+* Unhid DDoS functionality
+* Cleaned Setting Page
+* Obfuscated extention appearance to appear as Google Docs
     
 ## Privacy
 This extension DO NOT collect any personal or sensitive information about the users. Check out the code. Open an issue if you have any question.
@@ -15,10 +15,7 @@ This extension DO NOT collect any personal or sensitive information about the us
 ## History
 Since 2015 this project has been a very popular bot amoung the Hacker Experience players. Now the original project was adapted to work on Hacker Wars. Thanks for all contributors.
 
-## Overview
-This must be installed as a Google Chrome extension.
-
-Functionalities:
+## Functionalities:
 * Solves riddles path
 * Performs game missions
     * Hard and medium missions
@@ -32,6 +29,7 @@ Functionalities:
 * Custom user scripts (webcrawler)
 
 ## How to install
+This must be installed as a Google Chrome extension.
 1. Go to chrome://extensions/
 2. Check 'Developer mode' checkbox
 3. Click on 'Load unpacked extension...'
