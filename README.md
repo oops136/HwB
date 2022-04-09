@@ -1,7 +1,4 @@
 # HwB v.10
-Malicious content removed by regen@nuke.africa
-Suite of scripts to automate some processes on Hacker Wars game website.
-
 ## Changelog, v.10
 * Removed Federal's external websites 'socket.io' connection from code, likely used to siphon data.
 * Fixed webcrawler/mission/cleaners/monitor/camping sequencing to properly mitigrate 503 pages / void auto logout issue
