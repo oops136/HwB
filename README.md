@@ -1,4 +1,4 @@
-# HwB v0.10
+# HwB v.10
 Malicious content removed by regen@nuke.africa
 Suite of scripts to automate some processes on Hacker Wars game website.
 
